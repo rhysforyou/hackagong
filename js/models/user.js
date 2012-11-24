@@ -10,6 +10,11 @@ App.genders = ['guy', 'girl']
 App.User = Ember.Object.extend({
   age: null,
 
+  validAge: function() {
+    var age = this.age
+    return (age != null && age != 0 && !isNaN(age))
+  }.property("age"),
+
   birthsSinceBorn: function() {
     return addCommas(this.age * SECONDS_PER_YEAR * RATE_OF_BIRTH)
   }.property("age"),
