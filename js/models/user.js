@@ -19,6 +19,13 @@ App.User = Ember.Object.extend({
     return addCommas(this.age * SECONDS_PER_YEAR * RATE_OF_DEATH)
   }.property("age"),
 
+  netChangeInPopSinceBorn: function() {
+    var born = this.age * SECONDS_PER_YEAR * RATE_OF_BIRTH
+    var dead = this.age * SECONDS_PER_YEAR * RATE_OF_DEATH
+
+    return addCommas(born - dead)
+  }.property("age"),
+
   birthYear: function() {
     return 2012 - this.age
   }.property("age"),
@@ -46,6 +53,11 @@ App.User = Ember.Object.extend({
         name: 'deaths',
         figure: this.get('deathsSinceBorn'),
         description: 'people have died'
+      },
+      {
+        name: 'net-change',
+        figure: this.get('netChangeInPopSinceBorn'),
+        description: "the amount the world's populaition has increased in that time"
       },
       {
         name: 'sleeping',
