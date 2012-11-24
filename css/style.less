@@ -1,16 +1,19 @@
-@primaryColor: #4d3c22;
+@primaryColor: #12427f;
 
 body {
   font-family: "Futura medium", futura medium, futura, Arial, Helvetica, sans-serif;
   font-size: 16pt;
   margin: 0;
   padding: 0;
-  background-color: #eaddcd;
+  background-color: #d5eaf4;
 }
 
 #header {
     height: 42px;
     background-color: @primaryColor;
+    -webkit-box-shadow: inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+    -moz-box-shadow:    inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+    box-shadow:         inset 0px 2px 20px rgba(256, 256, 256, 0.1);
 
     #headerPadding {
         width: 960px;
@@ -48,13 +51,16 @@ body {
         border: 3px solid #fff;
         background: @primaryColor;
         margin-right: 10px;
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.2);
+        box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
         font-size: 18px;
         line-height: 1;
-        color: #afa395;
-        margin: 0 0 8px 0;
+        color: #a2b9e4;
+        margin: 0 0 3px 0;
         font-weight: normal;
         text-transform: uppercase;
         padding-top: 8px;
@@ -64,6 +70,38 @@ body {
     p {  margin: 0;
         font-size: 26px;
         line-height: 1.4;
+        color: #0088d3;
+    }
+
+    input{
+        font-size: 26px;
+        line-height: 1.2;
+        color: #1c50ac;
+        border: none;
+        background: none;
+        border-bottom: 2px solid #1c50ac;
+        width: 50px;
+        text-align: center;
+        margin-right: 10px;
+        outline: none;
+    }
+
+
+           select {
+              background: transparent;
+              -webkit-appearance: none;
+              font-size: 26px; line-height: 34px;
+              color: #1c50ac;
+              border: none;
+              outline: none;
+           }
+           select:focus { color: #1c50ac;   }
+
+
+    #selectAge::before {
+         content: "▼";
+         font-size: 14px;
+         color: #1c50ac;
     }
 
     #sharing {
@@ -74,7 +112,7 @@ body {
 
 }
 
-#results {
+#resultList {
     clear: both;
 
     .resultSet {
@@ -86,31 +124,70 @@ body {
         padding: 10px 0;
 
          h3 {
-            color: #fff;
+            color: #e8f6ff;
             font-size: 15px;
             line-height: 1;
             text-transform: uppercase;
             font-weight: normal;
             width: 960px;
             margin: 0 auto;
+
+            span {
+
+            font-size: 15px;
+            text-transform: none;
+            color: #88b3e8;
+
+            }
         }
     }
 
-    .dataRow {
+    .result {
         clear: both;
-        padding: 10px 0;
-        background: #bb9c6e;
-        border-bottom: 1px solid #8a6435;
+        padding: 20px 0;
+        background: #0155bb;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.02);
+        -webkit-box-shadow: inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+        -moz-box-shadow:    inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+        box-shadow:         inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+
 
         p {
 
-        font-size: 21px;
+        font-size: 18px;
         margin: 0 auto;
         width:960px;
+        color: #bfe5f2;
+
+            .dataFigure {
+                font-size: 28px;
+                color: #fff;
+            }
 
         }
+        .result::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+
+
+          }
 
     }
+
+    .result:nth-child(3) {  background-color: #035dc0;   }
+    .result:nth-child(4) {  background-color: #0567c6;   }
+    .result:nth-child(5) {  background-color: #0873cc;   }
+    .result:nth-child(6) {  background-color: #0b80d3;  }
+    .result:nth-child(7) {  background-color: #0e8ddb;   }
+    .result:nth-child(8) {  background-color: #129ae2;   }
+    .result:nth-child(9) {  background-color: #15a6e9;   }
+    .result:nth-child(10) {  background-color: #19bbf4;}
+    .result:nth-child(11) {  background-color: #1bc1f8;  }
 
 }
 
