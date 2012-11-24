@@ -34,6 +34,10 @@
       year old
       {{view Ember.Select contentBinding="App.genders" valueBinding="content.gender"}}
     </p>
+
+    <p>
+      That means you were born in {{content.birthYear}}, since then {{content.birthsSinceBorn}} people have been born, {{content.deathsSinceBorn}} people have died.
+    </p>
   </script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
