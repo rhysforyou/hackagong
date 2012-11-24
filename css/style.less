@@ -1,16 +1,20 @@
-@primaryColor: #3a250b;
+@primaryColor: #12427f;
 
 body {
   font-family: "Futura medium", futura medium, futura, Arial, Helvetica, sans-serif;
   font-size: 16pt;
   margin: 0;
   padding: 0;
-  background-color: #eaddcd;
+  background-color: #d5eaf4;
 }
 
 #header {
     height: 42px;
     background-color: @primaryColor;
+    -webkit-box-shadow: inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+    -moz-box-shadow:    inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+    box-shadow:         inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+    
     
     #headerPadding {
         width: 960px;
@@ -53,8 +57,8 @@ body {
     h2 {  
         font-size: 18px;
         line-height: 1;
-        color: #afa395;
-        margin: 0 0 8px 0;
+        color: #a2b9e4;
+        margin: 0 0 3px 0;
         font-weight: normal;
         text-transform: uppercase;
         padding-top: 8px;
@@ -63,42 +67,39 @@ body {
     
     p {  margin: 0; 
         font-size: 26px; 
-        line-height: 1.4;  
+        line-height: 1.4; 
+        color: #0088d3; 
     }
     
     input{  
         font-size: 26px; 
         line-height: 1.2; 
-        color: #7d7368; 
+        color: #1c50ac; 
         border: none; 
         background: none;  
-        border-bottom: 2px solid #222;
+        border-bottom: 2px solid #1c50ac;
         width: 50px;
         text-align: center;
         margin-right: 10px;
         outline: none;
     }
-    
-    #selectAge {  
-
-        
+     
            
            select {
               background: transparent;     
               -webkit-appearance: none;
-              font-size: 26px;
-              color: #7d7368;
+              font-size: 26px; line-height: 34px;
+              color: #1c50ac;
               border: none;
               outline: none;
            }
-           select:focus {  font-size: 14px;  }
+           select:focus { color: #1c50ac;   }
            
     
-    }
     #selectAge::before {  
          content: "▼";
          font-size: 14px; 
-         color: #7d7368;    
+         color: #1c50ac;    
     }
     
     #sharing {  
@@ -117,50 +118,74 @@ body {
     }
     
     .setHeader {  
-        background: #201b14;  
+        background: @primaryColor;  
         padding: 10px 0;
         
          h3 {
-            color: #fff;
+            color: #e8f6ff;
             font-size: 15px;
             line-height: 1;
             text-transform: uppercase;
             font-weight: normal;
             width: 960px;
             margin: 0 auto;
+            
+            span {
+            
+            font-size: 15px;
+            text-transform: none;
+            color: #88b3e8;
+            
+            }
         }
     }
     
     .dataRow {  
         clear: both;  
         padding: 20px 0;
-        background: #bb9c6d;
-        border-bottom: 1px solid #b39363;
+        background: #0155bb;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.02);
+        -webkit-box-shadow: inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+        -moz-box-shadow:    inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+        box-shadow:         inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+        
         
         p {
         
         font-size: 18px; 
         margin: 0 auto;
         width:960px;
+        color: #bfe5f2;
         
             .dataFigure {
                 font-size: 28px;
-                color: #4d3c22;
+                color: #fff;
             }
         
         }
+        .dataRow::after {  
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            
+        
+          }
         
     }
     
-    .dataRow:nth-child(3) {  background-color: #b49364; border-bottom: 1px solid #946e3d;  }
-    .dataRow:nth-child(4) {  background-color: #9d7845; border-bottom: 1px solid #896335;  }
-    .dataRow:nth-child(5) {  background-color: #946e3d; border-bottom: 1px solid #795529;  }
-    .dataRow:nth-child(6) {  background-color: #896335; border-bottom: 1px solid #6c491f;  }
-    .dataRow:nth-child(7) {  background-color: #795529; border-bottom: 1px solid #593a15;  }
-    .dataRow:nth-child(8) {  background-color: #6c491f; border-bottom: 1px solid #4e3211;  }
-    .dataRow:nth-child(9) {  background-color: #593a15; border-bottom: 1px solid #3a250b;  }
-    .dataRow:nth-child(10) {  background-color: #4e3211; border-bottom: 1px solid #3a250b;  }
-    .dataRow:nth-child(11) {  background-color: #3a250b; border-bottom: 1px solid #3a250b;  }
+    .dataRow:nth-child(3) {  background-color: #035dc0;   }
+    .dataRow:nth-child(4) {  background-color: #0567c6;   }
+    .dataRow:nth-child(5) {  background-color: #0873cc;   }
+    .dataRow:nth-child(6) {  background-color: #0b80d3;  }
+    .dataRow:nth-child(7) {  background-color: #0e8ddb;   }
+    .dataRow:nth-child(8) {  background-color: #129ae2;   }
+    .dataRow:nth-child(9) {  background-color: #15a6e9;   }
+    .dataRow:nth-child(10) {  background-color: #19bbf4;}
+    .dataRow:nth-child(11) {  background-color: #1bc1f8;  }
     
 }
 
