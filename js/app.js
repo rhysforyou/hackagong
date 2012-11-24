@@ -27,6 +27,11 @@ App.ResultsView = Ember.CollectionView.extend({
   })
 })
 
+App.TimerResultsView = App.ResultsView.extend({
+  contentBinding: 'App.Timer.results',
+  elementId: 'timer-results-list'
+})
+
 App.AgeTextField = Ember.TextField.extend({
   attributeBindings: ['autofocus'],
   autofocus: 'autofocus'
@@ -42,6 +47,8 @@ App.Router = Ember.Router.extend({
         var context = App.User.create()
 
         controller.connectOutlet('form', context)
+
+        App.Timer.start()
       }
     })
   })
