@@ -17,7 +17,7 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="//use.typekit.net/rqk0rdb.js"></script>
+  <script type="text/javascript" src="http://use.typekit.net/rqk0rdb.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <link href="css/style.less" rel="stylesheet" type="text/less">
@@ -28,7 +28,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+    js.src = "http://connect.facebook.net/en_GB/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -36,6 +36,16 @@
     <div id="header" >
         <div id="headerPadding">
             <h1><img src="images/logo.png" alt="Youveryone or another awesome name"></h1>
+            
+            <div id="headerSocial">
+                <div class="twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://infinitesmall.com">Tweet</a>
+                </div>
+                <div class="facebook">
+                    <div class="fb-like" data-href="http://infinitesmall.com" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+                </div>
+                
+            </div>
         </div>
     </div>
 
@@ -48,7 +58,7 @@
     <div id="userInfo">
       <div id="userInfoInput">
         <div id="userPhoto">
-
+            <img src="images/profile.png" alt="your photo">
         </div>
 
         <h2>Tell us a little about Yourself</h2>
@@ -60,8 +70,8 @@
         </p>
       </div>
 
-      <div id="sharing">
-        <div class="fb-like" data-href="http://infinitesmall.com" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+      <div id="something">
+        
       </div>
     </div>
 
@@ -92,5 +102,6 @@
   <script src="js/libs/formatters.js"></script>
   <script src="js/app.js"></script>
   <script src="js/models/user.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
