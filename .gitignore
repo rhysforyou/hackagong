@@ -1,3 +1,7 @@
 
 # .github-upload-token stores OAuth token, used by github_downloads gem
 .github-upload-token
+
+hackagong.esproj/Project.espressostorage
+
+hackagong.esproj/user.jordan.espressostorage
