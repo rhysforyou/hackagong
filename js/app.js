@@ -17,7 +17,6 @@ App.NoContentView = Ember.View.extend({
 App.ResultsView = Ember.CollectionView.extend({
   contentBinding: 'controller.content.results',
   tagName: 'section',
-  id: 'result-list',
   elementId: 'resultList',
   itemViewClass: Ember.View.extend({
     templateName: 'result',

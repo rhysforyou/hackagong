@@ -1,10 +1,3 @@
-var RATE_OF_BIRTH = 4.16
-var RATE_OF_DEATH = 1.76
-var SECONDS_PER_YEAR = 60 * 60 * 24 * 365.25
-var HOURS_OF_SLEEP_PER_NIGHT = 7.6
-var HOURS_SPENT_EATING_PER_DAY = 1.11
-var HOURS_SPENT_IN_BATHROOM_PER_DAY = 0.5
-
 App.Timer = Ember.Object.extend({
   time: 0,
   start: function() {
@@ -18,9 +11,19 @@ App.Timer = Ember.Object.extend({
     var time = this.get('time')
     return [
       {
-        name: 'deaths',
+        name: 'births',
         figure: addCommas(time * RATE_OF_BIRTH),
+        description: "people have been born"
+      },
+      {
+        name: 'deaths',
+        figure: addCommas(time * RATE_OF_DEATH),
         description: "people have died"
+      },
+      {
+        name: 'net-change',
+        figure: addCommas(time * (RATE_OF_BIRTH - RATE_OF_DEATH)),
+        description: "increase in world population"
       }
     ]
   }.property('time')

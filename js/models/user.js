@@ -1,12 +1,3 @@
-var RATE_OF_BIRTH = 4.16
-var RATE_OF_DEATH = 1.76
-var SECONDS_PER_YEAR = 60 * 60 * 24 * 365.25
-var HOURS_OF_SLEEP_PER_NIGHT = 7.6
-var HOURS_SPENT_EATING_PER_DAY = 1.11
-var HOURS_SPENT_IN_BATHROOM_PER_DAY = 0.5
-
-App.genders = ['guy', 'girl']
-
 App.User = Ember.Object.extend({
   age: null,
 
@@ -61,7 +52,7 @@ App.User = Ember.Object.extend({
       {
         name: 'net-change',
         figure: this.get('netChangeInPopSinceBorn'),
-        description: "change in the world's population since then"
+        description: "increase in world population"
       },
       {
         name: 'sleeping',
