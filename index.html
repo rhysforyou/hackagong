@@ -23,6 +23,15 @@
   <link href="css/style.less" rel="stylesheet" type="text/less">
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <script type="text/x-handlebars" data-template-name="application">
     <div id="header" >
         <div id="headerPadding">
@@ -50,6 +59,10 @@
           year old
           <span id="selectAge">{{ view Ember.Select contentBinding="App.genders" valueBinding="content.gender" }}</span>
         </p>
+      </div>
+
+      <div id="sharing">
+        <div class="fb-like" data-href="http://infinitesmall.com" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
       </div>
     </div>
 
