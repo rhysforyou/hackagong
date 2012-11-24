@@ -41,6 +41,8 @@ App.Router = Ember.Router.extend({
     index: Ember.Route.extend({
       route: '/',
 
+      shareURL: Ember.Route.transitionTo('shareURL'),
+
       connectOutlets: function(router) {
         var controller = router.get('applicationController')
         var context = App.User.create()
@@ -48,6 +50,26 @@ App.Router = Ember.Router.extend({
         controller.connectOutlet('form', context)
 
         App.Timer.start()
+      }
+    }),
+
+    shareURL: Ember.Route.extend({
+      route: '/:age',
+
+      serialize: function(router, context) {
+        return {
+          age: context.get("age")
+        }
+      },
+
+      deserialize: function(router, urlParams) {
+        return App.User.create({age: urlParams.age})
+      },
+
+      connectOutlets: function(router, context) {
+        var controller = router.get('applicationController')
+
+        controller.connectOutlet('form', context)
       }
     })
   })
