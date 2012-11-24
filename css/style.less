@@ -1,4 +1,4 @@
-@primaryColor: #4d3c22;
+@primaryColor: #3a250b;
 
 body {
   font-family: "Futura medium", futura medium, futura, Arial, Helvetica, sans-serif;
@@ -66,6 +66,41 @@ body {
         line-height: 1.4;  
     }
     
+    input{  
+        font-size: 26px; 
+        line-height: 1.2; 
+        color: #7d7368; 
+        border: none; 
+        background: none;  
+        border-bottom: 2px solid #222;
+        width: 50px;
+        text-align: center;
+        margin-right: 10px;
+        outline: none;
+    }
+    
+    #selectAge {  
+
+        
+           
+           select {
+              background: transparent;     
+              -webkit-appearance: none;
+              font-size: 26px;
+              color: #7d7368;
+              border: none;
+              outline: none;
+           }
+           select:focus {  font-size: 14px;  }
+           
+    
+    }
+    #selectAge::before {  
+         content: "▼";
+         font-size: 14px; 
+         color: #7d7368;    
+    }
+    
     #sharing {  
         width: 30%;
         float: right;
@@ -82,7 +117,7 @@ body {
     }
     
     .setHeader {  
-        background: @primaryColor;  
+        background: #201b14;  
         padding: 10px 0;
         
          h3 {
@@ -98,19 +133,34 @@ body {
     
     .dataRow {  
         clear: both;  
-        padding: 10px 0;
-        background: #bb9c6e;
-        border-bottom: 1px solid #8a6435;
+        padding: 20px 0;
+        background: #bb9c6d;
+        border-bottom: 1px solid #b39363;
         
         p {
         
-        font-size: 21px; 
+        font-size: 18px; 
         margin: 0 auto;
         width:960px;
+        
+            .dataFigure {
+                font-size: 28px;
+                color: #4d3c22;
+            }
         
         }
         
     }
+    
+    .dataRow:nth-child(3) {  background-color: #b49364; border-bottom: 1px solid #946e3d;  }
+    .dataRow:nth-child(4) {  background-color: #9d7845; border-bottom: 1px solid #896335;  }
+    .dataRow:nth-child(5) {  background-color: #946e3d; border-bottom: 1px solid #795529;  }
+    .dataRow:nth-child(6) {  background-color: #896335; border-bottom: 1px solid #6c491f;  }
+    .dataRow:nth-child(7) {  background-color: #795529; border-bottom: 1px solid #593a15;  }
+    .dataRow:nth-child(8) {  background-color: #6c491f; border-bottom: 1px solid #4e3211;  }
+    .dataRow:nth-child(9) {  background-color: #593a15; border-bottom: 1px solid #3a250b;  }
+    .dataRow:nth-child(10) {  background-color: #4e3211; border-bottom: 1px solid #3a250b;  }
+    .dataRow:nth-child(11) {  background-color: #3a250b; border-bottom: 1px solid #3a250b;  }
     
 }
 
