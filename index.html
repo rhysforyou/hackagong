@@ -17,10 +17,23 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <script type="text/x-handlebars" data-template-name="application">
     <h1>Hello from Ember.js</h1>
+
+    {{ outlet }}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="form">
+    <p>
+      I am an
+      {{ view Ember.TextField valueBinding="content.age" }}
+      year old
+      {{view Ember.Select contentBinding="App.genders" valueBinding="content.gender"}}
+    </p>
   </script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
