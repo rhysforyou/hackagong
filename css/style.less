@@ -112,6 +112,7 @@ body {
         text-align: center;
         margin-right: 4px;
         outline: none;
+        border-radius: 0;
     }
 
 
@@ -227,15 +228,15 @@ body {
     .bathroom i {  background: url(../images/icon_toilet.png) no-repeat 2px 50%;  }
     .net-change i {  background: url(../images/icon_net_change.png) no-repeat 1px 47%;  }
 
-    .result:nth-child(3) {  background-color: #004aa9;   }
-    .result:nth-child(4) {  background-color: #0567c6;   }
-    .result:nth-child(5) {  background-color: #0873cc;   }
-    .result:nth-child(6) {  background-color: #0b80d3;  }
-    .result:nth-child(7) {  background-color: #0e8ddb;   }
-    .result:nth-child(8) {  background-color: #129ae2;   }
-    .result:nth-child(9) {  background-color: #15a6e9;   }
-    .result:nth-child(10) {  background-color: #19bbf4;}
-    .result:nth-child(11) {  background-color: #1bc1f8;  }
+    .result:nth-child(1) {  background-color: #004aa9;   }
+    .result:nth-child(2) {  background-color: #0567c6;   }
+    .result:nth-child(3) {  background-color: #0873cc;   }
+    .result:nth-child(4) {  background-color: #0b80d3;  }
+    .result:nth-child(5) {  background-color: #0e8ddb;   }
+    .result:nth-child(6) {  background-color: #129ae2;   }
+    .result:nth-child(7) {  background-color: #15a6e9;   }
+    .result:nth-child(8) {  background-color: #19bbf4;}
+    .result:nth-child(9) {  background-color: #1bc1f8;  }
 
 }
 
@@ -366,6 +367,13 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
     }
     
     body::after {  content: '480px'; }
+}
+
+/* 320 and down */
+@media screen and (max-width:320px) {
+
+    
+    body::after {  content: '320px'; }
 }
 
 
