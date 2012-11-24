@@ -17,7 +17,7 @@ body {
 
 
     #headerPadding {
-        width: 960px;
+        max-width: 748px;
         margin: 0 auto;
     }
 
@@ -35,25 +35,35 @@ body {
 
     #headerSocial {
 
-    float: right;
-    text-align: right;
-    padding-top: 10px;
+        float: right;
+        text-align: right;
+        padding-top: 10px;
 
+        .twitter, {
+            float: right;
+            margin-left: 15px;
+        }
+        .facebook {
+            float: right;
+            margin-top: -4px;
+            height: 25px;
+            overflow: hidden;
+        }
+
+        .twitter iframe {
+            float: right;
+        }
+    
     }
 
 }
 
 #userInfo {
-    width: 960px;
+    max-width: 748px;
     margin: 0 auto;
     padding: 30px 0;
     height: 80px;
 
-
-    #userInfoInput {
-        width: 60%;
-        float: left;
-    }
 
     #userPhoto {
         float: left;
@@ -135,16 +145,16 @@ body {
 
      h3 {
         color: #e8f6ff;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 1;
         text-transform: uppercase;
         font-weight: normal;
-        width: 960px;
+        max-width: 748px;
         margin: 0 auto;
 
         span {
 
-        font-size: 15px;
+        font-size: 16px;
         text-transform: none;
         color: #88b3e8;
 
@@ -174,7 +184,7 @@ body {
         p {
             font-size: 18px;
             margin: 0 auto;
-            width:960px;
+            max-width: 748px;
             color: #bfe5f2;
             text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
             line-height: 50px;
@@ -199,16 +209,17 @@ body {
           i {
               width: 40px;
               float: left;
-              height: 50px;margin-top: -5px; margin-right: 10px;
+              height: 50px; margin-right: 10px;
           }
 
     }
 
     .births i {  background: url(../images/icon_birth.png) no-repeat 0 50%;  }
     .deaths i {  background: url(../images/icon_death.png) no-repeat 5px 50%;  }
-    .sleeping i {  background: url(../images/icon_sleeping2.png) no-repeat 2px 50%;  }
+    .sleeping i {  background: url(../images/icon_sleeping2.png) no-repeat 2px 47%;  }
     .eating i {  background: url(../images/icon_eating.png) no-repeat 2px 50%;  }
     .bathroom i {  background: url(../images/icon_toilet.png) no-repeat 2px 50%;  }
+    .net-change i {  background: url(../images/icon_net_change.png) no-repeat 1px 47%;  }
 
     .result:nth-child(3) {  background-color: #035dc0;   }
     .result:nth-child(4) {  background-color: #0567c6;   }
@@ -227,4 +238,19 @@ body {
     color: #999;
     padding: 50px 0;
 }
+
+/* 768 and down */
+@media screen and (max-width:768px) {
+
+#userInfo, #headerPadding, .setHeader, #resultList .result {  width: auto; padding-left: 10px; padding-right: 10px;  }
+#resultList .result p {
+    line-height: 24px;
+}
+
+
+
+
+body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 10px; background: red; color: #fff;  }
+}
+
 
