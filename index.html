@@ -24,38 +24,54 @@
 </head>
 <body>
   <script type="text/x-handlebars" data-template-name="application">
-    <header id="site-head">
-      <div class="container">
-        <h1>Ember.js</h1>
-      </div>
-    </header>
-
-    <div class="container">
-      {{ outlet }}
+    <div id="header" >
+        <div id="headerPadding">
+            <h1><img src="images/logo.png" alt="Youveryone or another awesome name"></h1>
+        </div>
     </div>
+
+    {{ outlet }}
   </script>
 
   <script type="text/x-handlebars" data-template-name="form">
-    <p>
-      I am an
-      {{ view Ember.TextField valueBinding="content.age" }}
-      year old
-      {{ view Ember.Select contentBinding="App.genders" valueBinding="content.gender" }}
-    </p>
+    <div id="userInfo">
+      <div id="userInfoInput">
+        <div id="userPhoto">
 
-    <section id="results">
-      <header>
-        <h1>That means you were born in {{content.birthYear}}, since then…</h1>
-      </header>
+        </div>
 
-      {{view App.ResultsView}}
+        <h2>Tell us a little about Yourself</h2>
+
+        <p>
+          I am a
+          {{ view Ember.TextField valueBinding="content.age" }}
+          year old
+          <span id="selectAge">{{ view Ember.Select contentBinding="App.genders" valueBinding="content.gender" }}</span>
+        </p>
+      </div>
+
+
+      <div id="sharing">
+          <h3>Share this with your friends</h3>
+      </div>
+    </div>
+    <section id="resultList">
+      <section class="resultSet">
+        <header class="setHeader">
+          <h3>That means you were born in {{content.birthYear}}. <span>Since then…</span></h3>
+        </header>
+
+        {{view App.ResultsView}}
+      </section>
     </section>
   </script>
 
   <script type="text/x-handlebars" data-template-name="result">
+    <p>
     <i class="icon"></i>
     <span class="figure">{{view.content.figure}}</span>
     <span class="description">{{view.content.description}}</span>
+  </p>
   </script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
