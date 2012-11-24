@@ -1,6 +1,25 @@
+@header-bg: #4d3c22;
+@light-text: #dbe1e1;
+
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 16pt;
-  width: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+header#site-head {
+  background: @header-bg;
+  color: @light-text;
+
+  h1 {
+    font-size: 24pt;
+    font-weight: lighter;
+    margin: 0;
+  }
+}
+
+.container {
+  max-width: 960px;
   margin: auto;
 }

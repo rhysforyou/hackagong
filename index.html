@@ -22,9 +22,15 @@
 </head>
 <body>
   <script type="text/x-handlebars" data-template-name="application">
-    <h1>Hello from Ember.js</h1>
+    <header id="site-head">
+      <div class="container">
+        <h1>Ember.js</h1>
+      </div>
+    </header>
 
-    {{ outlet }}
+    <div class="container">
+      {{ outlet }}
+    </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="form">
@@ -36,7 +42,7 @@
     </p>
 
     <p>
-      That means you were born in {{content.birthYear}}, since then {{content.birthsSinceBorn}} people have been born, {{content.deathsSinceBorn}} people have died.
+      That means you were born in {{content.birthYear}}, since then {{content.birthsSinceBorn}} people have been born, {{content.deathsSinceBorn}} people have died. You've slept for {{content.hoursSlept}} hours, eaten for {{content.hoursAte}} hours, and spent {{content.hoursInBathroom}} hours in the bathroom.
     </p>
   </script>
 
