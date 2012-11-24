@@ -9,7 +9,6 @@ App.genders = ['guy', 'girl']
 
 App.User = Ember.Object.extend({
   age: 18,
-  sex: 'guy',
 
   birthsSinceBorn: function() {
     return addCommas(this.age * SECONDS_PER_YEAR * RATE_OF_BIRTH)
