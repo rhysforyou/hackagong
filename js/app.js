@@ -10,6 +10,10 @@ App.FormView = Ember.View.extend({
   templateName: 'form'
 })
 
+App.NoContentView = Ember.View.extend({
+  templateName: 'no-content'
+})
+
 App.ResultsView = Ember.CollectionView.extend({
   contentBinding: 'controller.content.results',
   tagName: 'section',

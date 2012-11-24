@@ -8,7 +8,7 @@ var HOURS_SPENT_IN_BATHROOM_PER_DAY = 0.5
 App.genders = ['guy', 'girl']
 
 App.User = Ember.Object.extend({
-  age: 18,
+  age: null,
 
   birthsSinceBorn: function() {
     return addCommas(this.age * SECONDS_PER_YEAR * RATE_OF_BIRTH)

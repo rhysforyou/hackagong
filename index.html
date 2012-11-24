@@ -36,7 +36,7 @@
     <div id="header" >
         <div id="headerPadding">
             <h1><img src="images/logo.png" alt="Youveryone or another awesome name"></h1>
-            
+
             <div id="headerSocial">
                 <div class="twitter">
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://infinitesmall.com">Tweet</a>
@@ -44,7 +44,7 @@
                 <div class="facebook">
                     <div class="fb-like" data-href="http://infinitesmall.com" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -69,21 +69,20 @@
           years old
         </p>
       </div>
-
-      <div id="something">
-        
-      </div>
     </div>
 
     <header class="setHeader">
       <h3>That means you were born in {{content.birthYear}}. <span>Since then…</span></h3>
     </header>
-    <section id="resultList">
-      <section class="resultSet">
-
-        {{view App.ResultsView}}
+    {{#if content.age}}
+      <section id="resultList">
+        <section class="resultSet">
+          {{view App.ResultsView}}
+        </section>
       </section>
-    </section>
+    {{else}}
+      {{view App.NoContentView}}
+    {{/if}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="result">
@@ -92,6 +91,12 @@
       <span class="dataFigure">{{view.content.figure}}</span>
       <span class="description">{{view.content.description}}</span>
     </p>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="no-content">
+    <div id="nocontent">
+      <p>Looks like you haven't typed your age in. Why don't you give it a try?</p>
+    </div>
   </script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->
