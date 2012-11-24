@@ -27,6 +27,11 @@ App.ResultsView = Ember.CollectionView.extend({
   })
 })
 
+App.AgeTextField = Ember.TextField.extend({
+  attributeBindings: ['autofocus'],
+  autofocus: 'autofocus'
+})
+
 App.Router = Ember.Router.extend({
   root: Ember.Route.extend({
     index: Ember.Route.extend({
