@@ -5,15 +5,15 @@ body {
   font-size: 16pt;
   margin: 0;
   padding: 0;
-  background-color: #d5eaf4;
+  background-color: #f9fdff;
 }
 
 #header {
     height: 42px;
     background-color: @primaryColor;
-    -webkit-box-shadow: inset 0px 2px 20px rgba(256, 256, 256, 0.1);
-    -moz-box-shadow:    inset 0px 2px 20px rgba(256, 256, 256, 0.1);
-    box-shadow:         inset 0px 2px 20px rgba(256, 256, 256, 0.1);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.4);
+    box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.4);
 
 
     #headerPadding {
@@ -32,6 +32,14 @@ body {
             margin-top: 5px;
         }
     }
+    
+    #headerSocial {  
+    
+    float: right; 
+    text-align: right;
+    padding-top: 10px;
+    
+    }
 
 }
 
@@ -40,6 +48,7 @@ body {
     margin: 0 auto;
     padding: 30px 0;
     height: 80px;
+    
 
     #userInfoInput {
         width: 60%;
@@ -48,21 +57,22 @@ body {
 
     #userPhoto {
         float: left;
-        width: 60px;
-        height: 60px;
+        width: 62px;
+        height: 62px;
         border: 3px solid #fff;
         background: @primaryColor;
-        margin-right: 10px;
+        margin-right: 20px;
+        overflow: hidden;
         -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.2);
         box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1;
         color: #a2b9e4;
-        margin: 0 0 3px 0;
+        margin: 5px 0 0px 0;
         font-weight: normal;
         text-transform: uppercase;
         padding-top: 8px;
@@ -84,7 +94,7 @@ body {
         border-bottom: 2px solid #1c50ac;
         width: 50px;
         text-align: center;
-        margin-right: 10px;
+        margin-right: 4px;
         outline: none;
     }
 
@@ -117,6 +127,11 @@ body {
 .setHeader {
     background: @primaryColor;
     padding: 10px 0;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow:    0px 0px 10px rgba(0, 0, 0, 0.4);
+    box-shadow:         0px 0px 10px rgba(0, 0, 0, 0.4);
+    position: relative; 
+    z-index: 10;
 
      h3 {
         color: #e8f6ff;
