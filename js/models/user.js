@@ -61,7 +61,7 @@ App.User = Ember.Object.extend({
       {
         name: 'net-change',
         figure: this.get('netChangeInPopSinceBorn'),
-        description: "the amount the world's populaition has increased in that time"
+        description: "change in the world's population since then"
       },
       {
         name: 'sleeping',
