@@ -43,23 +43,19 @@
       {{ view Ember.Select contentBinding="App.genders" valueBinding="content.gender" }}
     </p>
 
-    <section id+"results">
+    <section id="results">
       <header>
         <h1>That means you were born in {{content.birthYear}}, since then…</h1>
       </header>
-      
-      <article class="result births">
-        <i class="icon-births"></i>
-        <span class="figure">{{content.birthsSinceBorn}}</span>
-        <span class="description">people have been born</span>
-      </article>
 
-      <article class="result deaths">
-        <i class="icon-deaths"></i>
-        <span class="figure">{{content.deathsSinceBorn}}</span>
-        <span class="description">people have died</span>
-      </article>
+      {{view App.ResultsView}}
     </section>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="result">
+    <i class="icon"></i>
+    <span class="figure">{{view.content.figure}}</span>
+    <span class="description">{{view.content.description}}</span>
   </script>
 
   <!-- The missing protocol means that it will match the current protocol, either http or https. If running locally, we use the local jQuery. -->

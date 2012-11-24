@@ -33,5 +33,35 @@ App.User = Ember.Object.extend({
 
   hoursInBathroom: function() {
     return addCommas(this.age * 365.25 * HOURS_SPENT_IN_BATHROOM_PER_DAY)
+  }.property("age"),
+
+  results: function() {
+    return [
+      {
+        name: 'births',
+        figure: this.get('birthsSinceBorn'),
+        description: 'people have been born'
+      },
+      {
+        name: 'deaths',
+        figure: this.get('deathsSinceBorn'),
+        description: 'people have died'
+      },
+      {
+        name: 'sleeping',
+        figure: this.get('hoursSlept'),
+        description: 'hours of your life have been spent sleeping'
+      },
+      {
+        name: 'eating',
+        figure: this.get('hoursAte'),
+        description: 'hours of your life have been spent eating'
+      },
+      {
+        name: 'bathroom',
+        figure: this.get('hoursInBathroom'),
+        description: 'hours of your life have been spent in the bathroom'
+      }
+    ]
   }.property("age")
 })

@@ -10,6 +10,19 @@ App.FormView = Ember.View.extend({
   templateName: 'form'
 })
 
+App.ResultsView = Ember.CollectionView.extend({
+  contentBinding: 'controller.content.results',
+  tagName: 'section',
+  id: 'result-list',
+  elementId: 'resultList',
+  itemViewClass: Ember.View.extend({
+    templateName: 'result',
+    classNameBindings: ['content.name'],
+    classNames: ['result'],
+    tagName: 'article'
+  })
+})
+
 App.Router = Ember.Router.extend({
   root: Ember.Route.extend({
     index: Ember.Route.extend({
