@@ -223,7 +223,7 @@ body {
     margin-bottom: 30px;
 
     h2 {
-        width: 470px;
+        width: 560px;
         margin: 73px auto 0;
         background: url(../images/youare.png) no-repeat 0 0;
         padding-top: 8px;
@@ -235,7 +235,7 @@ body {
 
         .you {
 
-        font-size: 19px;
+        font-size: 30px;
         line-height: 1;
         color: #63b5e4;
         margin: 0;
@@ -248,7 +248,7 @@ body {
         .figure {
             color: #0088d6;
             font-weight: normal;
-            font-size: 66px;
+            font-size: 102px;
             line-height: .9;
             text-transform: uppercase;
             margin: 0;
@@ -258,13 +258,12 @@ body {
 
         .peopleWorld {
 
-        font-size: 24px;
+        font-size: 34px;
         line-height: 1;
         color: #63b5e4;
-        margin: 0;
         font-weight: normal;
         text-transform: uppercase;
-        margin-right: 60px;
+        margin-right: 100px;
         }
     }
 
@@ -346,14 +345,15 @@ body {
 
     #footer {
         background: @primaryColor;
-        padding: 10px;
+        width: 100%;
 
         p {
 
         color: #6BB3E5;
         font-size: 14px;
         line-height: 17px;
-        margin: 0;
+        margin: 0 10px;
+        padding: 10px;
         text-align: center;
 
         }
@@ -370,7 +370,59 @@ body {
 #headerPadding, .setHeader, .resultList .result, #userInfo {  width: auto; padding-left: 10px; padding-right: 10px;  }
 
 
-body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 10px; background: red; color: #fff;  }
+
+#nocontent {
+    padding:20px;
+    border-top: 1px solid #d2e8f7;
+    margin-bottom: 30px;
+
+    h2 {
+        width: 470px;
+        margin: 73px auto 0;
+        background: url(../images/youare.png) no-repeat 0 0;
+        padding-top: 8px;
+
+        span {
+            padding-left: 50px;
+            display: block;
+        }
+
+        .you {
+
+        font-size: 19px;
+        line-height: 1;
+        color: #63b5e4;
+        margin: 0;
+        font-weight: normal;
+        text-transform: uppercase;
+
+
+        }
+
+        .figure {
+            color: #0088d6;
+            font-weight: normal;
+            font-size: 66px;
+            line-height: .9;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -2px;
+            position: relative; top: 3px;
+        }
+
+        .peopleWorld {
+
+        font-size: 24px;
+        line-height: 1;
+        color: #63b5e4;
+        margin: 0;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-right: 60px;
+        }
+    }
+}
+
 
 
 }
@@ -433,7 +485,6 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
     }
 
 
-    body::after {  content: '500px'; }
 }
 
 /* 400 and down */
@@ -490,9 +541,6 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 
     #userInfo {  padding-top: 8px;  }
         #userInfo p {  line-height: 1.3;  }
-    #userInfo #sharing {  position: relative; text-align: left; top: 0; left: 0;margin :5px 0 15px;padding: 0; text-align:center; }
-        #userInfo #sharing a {  width: auto; font-size: 14px; color: #6bb3e5; display: block;  }
-        #userInfo #sharing a:hover {  color: #fff;  }
 
 #sharing {
         position: relative;
@@ -500,12 +548,20 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
         right: 0;
         padding-left: 0;
         padding-top: 30px;
-        text-align: center;
+        text-align: left;
+        width: auto;
+        margin-right: 0;
+        background: #fff;
+        padding-left: 52px;
+        background: #f9fdff url(../images/shareMan.png) no-repeat 20px 50%;
+        padding-bottom: 10px;
 
          a { font-size: 18px;
 
          }
          a:hover {
+         
+         color: #222;
 
          }
 
@@ -513,6 +569,5 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 
     .resultList .result.bathroom i {  height: 80px;  }
 
-    body::after {  content: '400px'; }
 }
 
