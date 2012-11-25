@@ -29,6 +29,11 @@ App.Timer = Ember.Object.extend({
         name: 'orbit',
         figure: addCommas(time * RATE_OF_EARTHS_ORBIT),
         description: 'kilometers the Earth has orbited around the Sun'
+      },
+      {
+        name: 'tweets',
+        figure: addCommas(time * 3) + "K",
+        description: 'tweets have been posted, why not post another'
       }
     ]
   }.property('time')
