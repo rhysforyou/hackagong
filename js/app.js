@@ -70,6 +70,19 @@ App.Router = Ember.Router.extend({
         var controller = router.get('applicationController')
 
         controller.connectOutlet('form', context)
+
+        App.Timer.start()
+
+        setTimeout(function() {
+          App.set('currentURL', document.URL)
+
+          twitterURL = "http://twitter.com/share?url=&text=" + escape(document.URL)
+          console.log(twitterURL)
+
+          $('#shareButton').css('display', 'none')
+          $('#sharing .shareControls').css('display', 'block')
+          $('#sharing .twitterButton').attr('href', twitterURL)
+        }, 1000)
       }
     })
   })

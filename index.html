@@ -71,7 +71,14 @@
         </p>
       </div>
 
-      <a href="#" {{ action shareURL content }}>Share your results</a>
+      <div id="sharing">
+        <a id="shareButton" href="#" {{ action shareURL content }}>Share your results</a>
+
+        <div class="shareControls" style="display: none">
+          {{view Ember.TextField valueBinding="App.currentURL"}}
+          <a href="http://twitter.com/share" class="twitterButton">Tweet</a>
+        </div>
+      </div>
     </div>
 
     {{#if content.validAge}}
