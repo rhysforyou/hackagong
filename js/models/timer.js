@@ -1,10 +1,16 @@
 App.Timer = Ember.Object.extend({
+  running: false,
   time: 0,
+
   start: function() {
-    setInterval(function() {
-      var time = App.Timer.get('time')
-      App.Timer.set('time', time + 1)
-    }, 1000)
+    if (!this.get('running')) {
+      setInterval(function() {
+        var time = App.Timer.get('time')
+        App.Timer.set('time', time + 1)
+      }, 1000)
+
+      this.set('running', true)
+    }
   },
 
   results: function() {

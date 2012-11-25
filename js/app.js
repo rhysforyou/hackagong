@@ -49,8 +49,6 @@ App.Router = Ember.Router.extend({
 
         controller.connectOutlet('form', context)
 
-        App.Timer.start()
-
         context.addObserver('validAge', animateRows)
       }
     }),
@@ -73,8 +71,6 @@ App.Router = Ember.Router.extend({
         var controller = router.get('applicationController')
 
         controller.connectOutlet('form', context)
-
-        App.Timer.start()
 
         setTimeout(function() {
           App.set('currentURL', document.URL)

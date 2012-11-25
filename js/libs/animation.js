@@ -14,4 +14,8 @@ var animateRows = function() {
       }, index * 100, this)
     })
   }, 10)
+
+  setTimeout(function() {
+    App.Timer.start();
+  }, 2000)
 }
