@@ -65,6 +65,7 @@ App.Router = Ember.Router.extend({
       },
 
       deserialize: function(router, urlParams) {
+        animateRows()
         return App.User.create({age: urlParams.age})
       },
 
