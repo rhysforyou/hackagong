@@ -1,8 +1,4 @@
-var ROWS_ANIMATED = false
-
 var animateRows = function() {
-  if (ROWS_ANIMATED) { return }
-
   setTimeout(function() {
     rows = $('.resultSet .result')
 
@@ -18,6 +14,4 @@ var animateRows = function() {
       }, index * 100, this)
     })
   }, 10)
-
-  ROWS_ANIMATED = true
 }

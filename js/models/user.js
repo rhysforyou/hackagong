@@ -1,10 +1,16 @@
 App.User = Ember.Object.extend({
   age: null,
 
-  validAge: function() {
+  validAge: false,
+
+  validateAge: function() {
     var age = this.age
-    return (age != null && age != 0 && !isNaN(age))
-  }.property("age"),
+    if (age != null && age != 0 && !isNaN(age) && age > 9) {
+      this.set('validAge', true)
+    } else {
+      this.set('validAge', false)
+    }
+  }.observes("age"),
 
   birthsSinceBorn: function() {
     return addCommas(this.age * SECONDS_PER_YEAR * RATE_OF_BIRTH)
