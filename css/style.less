@@ -33,32 +33,6 @@ body {
             margin-top: 5px;
         }
     }
-
-    #headerSocial {
-
-        float: right;
-        text-align: right;
-        padding-top: 10px;
-
-        .twitter {
-            float: right;
-            margin-left: 15px;
-        }
-        .facebook {
-            float: right;
-            height: 21px;
-            overflow: hidden;
-            margin-top: 1px;
-
-            span {
-                height: 24px !important;
-            }
-
-            iframe {  height: 24px !important;  }
-        }
-
-    }
-
 }
 
 #userInfo {
@@ -66,6 +40,7 @@ body {
     padding: 30px 0;
     height: 80px;
     background-color: #f9fdff;
+    position: relative;
 
     #userInfoInput {
         max-width: 748px;
@@ -135,11 +110,7 @@ body {
          color: #1c50ac;
     }
 
-    #sharing {
-        width: 30%;
-        float: right;
 
-    }
 
 }
 
@@ -188,7 +159,7 @@ body {
         -moz-box-shadow:    inset 0px 1px 0px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(256, 256, 256, 0.1);
         box-shadow:         inset 0px 1px 0px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(256, 256, 256, 0.1);
         overflow: hidden;
-        
+
         max-width: 100%;
 
         -webkit-transition: all 1s ease-in-out;
@@ -277,10 +248,12 @@ body {
         .figure {
             color: #0088d6;
             font-weight: normal;
-            font-size: 60px;
-            line-height: 1.1;
+            font-size: 66px;
+            line-height: .9;
+            text-transform: uppercase;
             margin: 0;
             letter-spacing: -2px;
+            position: relative; top: 3px;
         }
 
         .peopleWorld {
@@ -291,16 +264,14 @@ body {
         margin: 0;
         font-weight: normal;
         text-transform: uppercase;
-
-
+        margin-right: 60px;
         }
     }
 
     p {
 
         width: 470px;
-        margin: 20px auto 0;
-
+        margin: 20px auto 20px;
 
         span {
             padding: 10px;
@@ -311,19 +282,73 @@ body {
             color: #fff;
             font-weight: normal;
             text-transform: uppercase;
-            margin: 0 0 0 50px;
             display: inline-block;
         }
 
     }
 }
 
+#headerSocial {
+
+        text-align: center;
+        padding-top: 10px;
+
+        .twitter {
+            display: inline-block;
+            margin-left: 15px;
+
+        }
+        .facebook {
+            display: inline-block;
+            height: 21px;
+            overflow: hidden;
+            margin-top: 1px;
+
+            span {
+                height: 24px !important;
+            }
+
+            iframe {  height: 24px !important;  }
+        }
+
+    }
+#sharing {
+        position: absolute;
+        top: 78px;
+        right: 50px;
+        padding-left: 32px;
+        background: url(../images/shareMan.png) no-repeat 0 0;
+
+         a {
+
+            width: 40px;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #43a7ee;
+            display: block;
+            text-decoration: none;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            -webkit-transition: color .4s ease;
+
+         }
+         a:hover {
+
+         color: #12417e;
+         }
+
+
+
+
+    }
+
 
 
 /* 768 and down */
 @media screen and (max-width:768px) {
 
-#headerPadding, .setHeader, #resultList .result {  width: auto; padding-left: 10px; padding-right: 10px;  }
+#headerPadding, .setHeader, #resultList .result, #userInfo {  width: auto; padding-left: 10px; padding-right: 10px;  }
 #resultList .result p {
     line-height: 24px;
 }
@@ -333,8 +358,8 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 
 }
 
-/* 480 and down */
-@media screen and (max-width:480px) {
+/* 500 and down */
+@media screen and (max-width:500px) {
 
     #nocontent {
         padding: 0 10px;
@@ -343,7 +368,7 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 
         h2 {
             width: auto;
-            margin-top: 20px;
+            margin-top: 30px;
 
             .you {
 
@@ -353,12 +378,12 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
             }
 
             .figure {
-                font-size: 48px;
+                font-size: 72px;
             }
 
             .peopleWorld {
 
-            font-size: 18px;
+            font-size: 21px;
 
 
             }
@@ -371,6 +396,7 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
         span {
             font-size: 18px;
             margin-left: 0;
+
         }
 
         }
@@ -379,23 +405,17 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 
     #userInfo {  padding: 15px 10px; width: auto;  }
 
+     #sharing {  top: 6px; background: none; right: 20px;  }
+         #sharing a {  width: auto; font-size: 14px; color: #6bb3e5;  }
+         #sharing a:hover {  color: #fff;  }
 
-    body::after {  content: '480px'; }
+
+
+    body::after {  content: '500px'; }
 }
 
 /* 400 and down */
 @media screen and (max-width:400px) {
-
-    #headerSocial {
-        position: absolute;
-        top: 360px;
-        width: 240px;
-        left: 50%;
-        margin-left: -120px;
-        text-align: center;
-
-    }
-
     #userInfo h2, #userInfo p {
 
     text-align: center;
@@ -408,7 +428,7 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
         width: 300px;
 
         h2 {
-            margin-top: 20px;
+            margin-top: 35px;
 
             .you {
 
@@ -418,12 +438,13 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
             }
 
             .figure {
-                font-size: 36px;
+                font-size: 56px; top: 0;
             }
 
             .peopleWorld {
 
-            font-size: 16px;
+            font-size: 18px;
+            margin-right: 0;
 
 
             }
@@ -433,31 +454,41 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
         p {
 
         width: auto;
+        margin-bottom: 10px;
         span {
-            font-size: 16px;
+            font-size: 14px;
+            display: block;
+            text-align: center;
         }
-
         }
-
     }
 
     #header h1 {  text-align: center;  float: none; margin: 0 auto; padding-top: 1px;  }
     #userPhoto {  display: none;  }
 
+    #userInfo {  padding-top: 8px;  }
+        #userInfo p {  line-height: 1.3;  }
+    #userInfo #sharing {  position: relative; text-align: left; top: 0; left: 0;margin :5px 0 15px;padding: 0; text-align:center; }
+        #userInfo #sharing a {  width: auto; font-size: 14px; color: #6bb3e5; display: block;  }
+        #userInfo #sharing a:hover {  color: #fff;  }
+
+#sharing {
+        position: relative;
+        top: 0;
+        right: 0;
+        padding-left: 0;
+        padding-top: 30px;
+        text-align: center;
+
+         a { font-size: 18px;
+
+         }
+         a:hover {
+
+         }
+
+    }
+
     body::after {  content: '400px'; }
 }
-
-
-/* 320 and down */
-@media screen and (max-width:320px) {
-
-
-    body::after {  content: '320px'; }
-}
-
-
-
-
-
-
 
