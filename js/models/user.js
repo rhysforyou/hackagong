@@ -3,7 +3,7 @@ App.User = Ember.Object.extend({
 
   validAge: function() {
     var age = this.age
-    return (age != null && age != 0 && !isNaN(age))
+    return (age != null && age !== 0 && !isNaN(age))
   }.property("age"),
 
   birthsSinceBorn: function() {
