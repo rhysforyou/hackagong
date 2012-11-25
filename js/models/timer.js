@@ -24,6 +24,11 @@ App.Timer = Ember.Object.extend({
         name: 'net-change',
         figure: addCommas(time * (RATE_OF_BIRTH - RATE_OF_DEATH)),
         description: "increase in world population"
+      },
+      {
+        name: 'orbit',
+        figure: addCommas(time * RATE_OF_EARTHS_ORBIT),
+        description: 'kilometers the Earth has orbited around the Sun'
       }
     ]
   }.property('time')
