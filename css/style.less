@@ -5,7 +5,7 @@ body {
   font-size: 16pt;
   margin: 0;
   padding: 0;
-  
+
   background: #e1eff8 url(../images/holding.png) repeat center top;
 }
 
@@ -49,11 +49,11 @@ body {
             height: 21px;
             overflow: hidden;
             margin-top: 1px;
-            
+
             span {
                 height: 24px !important;
             }
-            
+
             iframe {  height: 24px !important;  }
         }
 
@@ -62,11 +62,11 @@ body {
 }
 
 #userInfo {
-    
+
     padding: 30px 0;
     height: 80px;
     background-color: #f9fdff;
-    
+
     #userInfoInput {
         max-width: 748px;
         margin: 0 auto;
@@ -188,6 +188,10 @@ body {
         -moz-box-shadow:    inset 0px 1px 0px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(256, 256, 256, 0.1);
         box-shadow:         inset 0px 1px 0px rgba(255, 255, 255, 0.1), inset 0px 2px 20px rgba(256, 256, 256, 0.1);
         overflow: hidden;
+        
+        max-width: 100%;
+
+        -webkit-transition: all 1s ease-in-out;
 
 
         p {
@@ -246,58 +250,58 @@ body {
     padding:20px;
     border-top: 1px solid #d2e8f7;
     margin-bottom: 30px;
-    
+
     h2 {
         width: 470px;
         margin: 73px auto 0;
         background: url(../images/youare.png) no-repeat 0 0;
         padding-top: 8px;
-        
+
         span {
             padding-left: 50px;
             display: block;
         }
-        
-        .you {    
-        
+
+        .you {
+
         font-size: 19px;
         line-height: 1;
         color: #63b5e4;
         margin: 0;
         font-weight: normal;
         text-transform: uppercase;
-        
-        
+
+
         }
-        
-        .figure {  
-            color: #0088d6; 
-            font-weight: normal; 
+
+        .figure {
+            color: #0088d6;
+            font-weight: normal;
             font-size: 60px;
             line-height: 1.1;
             margin: 0;
-            letter-spacing: -2px;  
+            letter-spacing: -2px;
         }
-        
-        .peopleWorld {    
-        
+
+        .peopleWorld {
+
         font-size: 24px;
         line-height: 1;
         color: #63b5e4;
         margin: 0;
         font-weight: normal;
         text-transform: uppercase;
-        
-        
+
+
         }
     }
-    
-    p {    
-    
+
+    p {
+
         width: 470px;
         margin: 20px auto 0;
-        
-        
+
+
         span {
             padding: 10px;
             background: #0088d6;
@@ -310,7 +314,7 @@ body {
             margin: 0 0 0 50px;
             display: inline-block;
         }
-    
+
     }
 }
 
@@ -332,114 +336,114 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 /* 480 and down */
 @media screen and (max-width:480px) {
 
-    #nocontent {  
-        padding: 0 10px;  
+    #nocontent {
+        padding: 0 10px;
         margin: 0 auto;
         width: 380px;
-        
+
         h2 {
             width: auto;
             margin-top: 20px;
-            
-            .you {    
-            
+
+            .you {
+
             font-size: 21px;
-            
-            
+
+
             }
-            
-            .figure {  
+
+            .figure {
                 font-size: 48px;
             }
-            
-            .peopleWorld {    
-            
+
+            .peopleWorld {
+
             font-size: 18px;
-            
-            
+
+
             }
-            
+
         }
-        
-        p {  
-        
-        width: auto; 
+
+        p {
+
+        width: auto;
         span {
             font-size: 18px;
             margin-left: 0;
         }
-        
+
         }
-        
+
     }
-    
+
     #userInfo {  padding: 15px 10px; width: auto;  }
-    
-    
+
+
     body::after {  content: '480px'; }
 }
 
 /* 400 and down */
 @media screen and (max-width:400px) {
-    
-    #headerSocial {  
-        position: absolute;  
+
+    #headerSocial {
+        position: absolute;
         top: 360px;
         width: 240px;
         left: 50%;
         margin-left: -120px;
         text-align: center;
-        
+
     }
-    
-    #userInfo h2, #userInfo p {    
-    
+
+    #userInfo h2, #userInfo p {
+
     text-align: center;
-    
+
     }
-    
-    #nocontent {  
-        
+
+    #nocontent {
+
         margin: 0 auto;
         width: 300px;
-        
+
         h2 {
             margin-top: 20px;
-            
-            .you {    
-            
+
+            .you {
+
             font-size: 16px;
-            
-            
+
+
             }
-            
-            .figure {  
+
+            .figure {
                 font-size: 36px;
             }
-            
-            .peopleWorld {    
-            
+
+            .peopleWorld {
+
             font-size: 16px;
-            
-            
+
+
             }
-            
+
         }
-        
-        p {  
-        
+
+        p {
+
         width: auto;
         span {
             font-size: 16px;
         }
-        
-        }  
-        
+
+        }
+
     }
-    
+
     #header h1 {  text-align: center;  float: none; margin: 0 auto; padding-top: 1px;  }
     #userPhoto {  display: none;  }
-    
+
     body::after {  content: '400px'; }
 }
 
@@ -447,7 +451,7 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
 /* 320 and down */
 @media screen and (max-width:320px) {
 
-    
+
     body::after {  content: '320px'; }
 }
 
