@@ -350,10 +350,8 @@ body {
 /* 768 and down */
 @media screen and (max-width:768px) {
 
-#headerPadding, .setHeader, #resultList .result, #userInfo {  width: auto; padding-left: 10px; padding-right: 10px;  }
-#resultList .result p {
-    line-height: 24px;
-}
+#headerPadding, .setHeader, .resultList .result, #userInfo {  width: auto; padding-left: 10px; padding-right: 10px;  }
+
 
 body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 10px; background: red; color: #fff;  }
 
@@ -411,7 +409,12 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
      #sharing {  top: 6px; background: none; right: 20px;  }
          #sharing a {  width: auto; font-size: 14px; color: #6bb3e5;  }
          #sharing a:hover {  color: #fff;  }
-    
+         
+    .resultList .result p {
+        line-height: 24px;
+        
+        
+    }
     
     
     body::after {  content: '500px'; }
@@ -497,6 +500,9 @@ body::after {  content: '768px'; position: fixed; top: 0; left: 0; padding: 5px 
          }
             
     }
+    
+    .resultList .result.bathroom i {  height: 80px;  }
+
     
     body::after {  content: '400px'; }
 }
