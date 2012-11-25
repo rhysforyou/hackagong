@@ -24,15 +24,6 @@
   <link href="css/style.less" rel="stylesheet" type="text/less">
 </head>
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "http://connect.facebook.net/en_GB/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
   <script type="text/x-handlebars" data-template-name="application">
     <div id="header" >
         <div id="headerPadding">
@@ -62,7 +53,7 @@
         </p>
       </div>
 
-      
+
     </div>
 
     {{#if content.validAge}}
@@ -84,10 +75,10 @@
           {{view App.TimerResultsView}}
         </section>
       </section>
-      
+
       <div id="sharing">
               <a id="shareButton" href="#" {{ action shareURL content }}>Share your results</a>
-      
+
               <div class="shareControls" style="display: none">
                 {{view Ember.TextField valueBinding="App.currentURL"}}
                 <a href="http://twitter.com/share" class="twitterButton">Tweet</a>
@@ -120,10 +111,6 @@
                       <div class="twitter">
                       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://infinitesmall.com">Tweet</a>
                       </div>
-                      <div class="facebook">
-                          <div class="fb-like" data-href="http://infinitesmall.com" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
-                      </div>
-      
                   </div>
     </div>
   </script>
